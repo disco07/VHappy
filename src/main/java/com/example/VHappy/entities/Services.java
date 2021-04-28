@@ -15,37 +15,8 @@ public class Services {
     @ManyToOne
     private User idUser;
 
-    public Services(Long id, String title, Integer price, User idUser) {
-        this.id = id;
-        this.title = title;
-        this.price = price;
-        this.idUser = idUser;
-    }
+    public Services() {
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Services services = (Services) o;
-        return idUser == services.idUser && Objects.equals(id, services.id) && Objects.equals(title, services.title) && Objects.equals(price, services.price);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, price, idUser);
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("Services{");
-        sb.append("id=").append(id);
-        sb.append(", title='").append(title).append('\'');
-        sb.append(", price=").append(price);
-        sb.append(", idUser=").append(idUser);
-        sb.append('}');
-        return sb.toString();
     }
 
     public Long getId() {

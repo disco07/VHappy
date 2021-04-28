@@ -17,43 +17,8 @@ public class User {
     private Integer jeton;
     private String address;
 
-    public User(Long id, String nom, String prenom, String mail, String mdp, Integer jeton, String address) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.mail = mail;
-        this.mdp = mdp;
-        this.jeton = jeton;
-        this.address = address;
-    }
+    public User() {
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        User user = (User) o;
-        return Objects.equals(id, user.id) && Objects.equals(nom, user.nom) && Objects.equals(prenom, user.prenom) && Objects.equals(mail, user.mail) && Objects.equals(mdp, user.mdp) && Objects.equals(jeton, user.jeton) && Objects.equals(address, user.address);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nom, prenom, mail, mdp, jeton, address);
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("User{");
-        sb.append("id=").append(id);
-        sb.append(", nom='").append(nom).append('\'');
-        sb.append(", prenom='").append(prenom).append('\'');
-        sb.append(", mail='").append(mail).append('\'');
-        sb.append(", mdp='").append(mdp).append('\'');
-        sb.append(", jeton=").append(jeton);
-        sb.append(", address='").append(address).append('\'');
-        sb.append('}');
-        return sb.toString();
     }
 
     public Long getId() {

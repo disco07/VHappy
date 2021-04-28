@@ -16,37 +16,8 @@ public class Reservation {
     @Convert(converter = LocalDateTimeConvert.class)
     private LocalDateTime dateTime;
 
-    public Reservation(Long id, Services idService, User idUser, LocalDateTime dateTime) {
-        this.id = id;
-        this.idService = idService;
-        this.idUser = idUser;
-        this.dateTime = dateTime;
-    }
+    public Reservation() {
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        Reservation that = (Reservation) o;
-        return Objects.equals(id, that.id) && Objects.equals(idService, that.idService) && Objects.equals(idUser, that.idUser) && Objects.equals(dateTime, that.dateTime);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, idService, idUser, dateTime);
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("Reservation{");
-        sb.append("id=").append(id);
-        sb.append(", idService=").append(idService);
-        sb.append(", idUser=").append(idUser);
-        sb.append(", dateTime=").append(dateTime);
-        sb.append('}');
-        return sb.toString();
     }
 
     public Long getId() {
